@@ -35,7 +35,7 @@ with placeholder.container():
     kpi2.metric(label="Average low", value=f"$ {round(avg_low,3)}")
     kpi3.metric(label="Average opening", value=f"$ {round(avg_open,3)}")
     kpi4.metric(label="Average closing", value=f"$ {round(avg_close,3)}")
-
+    st.markdown("---")
     fig_col1, fig_col2 = st.columns(2)
     with fig_col1:
         plotly_close = px.line(df, x = 'Date', y = 'Close', title = '<b>Stock Performance for GOOGLE</b>')
